@@ -3,11 +3,11 @@ import './App.css';
 
 import Navbar from './components/Navbar';
 import Textform from './components/Textform';
-// import About from './components/About';
+ import About from './components/About';
 import React, { useState } from 'react';
 import Alert from './components/Alert';
 
-// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 //main function
 function App() {
   //dark mode setting
@@ -42,26 +42,27 @@ function App() {
   }  
   return (
   <>
-      <Navbar title="textUtils" home="Home" about="About" mode={mode} togglemode={togglemode}/>
+      {/* <Navbar title="textUtils" home="Home" about="About" mode={mode} togglemode={togglemode}/>
       <Alert alert={alert}/>
       <div className="container">
      
       <Textform mode={mode} showalert={showalert} /> 
-
+  </div> 
     {/* <About/> */}
-      </div>
+    
 
-{/* <Router>
+<Router>
      <Navbar title="textUtils" home="Home" about="About" mode={mode} togglemode={togglemode}/>
       <Alert alert={alert}/>
+      {/* <Textform mode={mode} showalert={showalert} /> */}
         <Routes>
         
           <Route exact path="/" element={<Textform mode={mode} showalert={showalert} /> }/>
-          <Route exact path="/about" element={<About/>}/>
+          <Route exact path="/About" element={<About/>}/>
         
         </Routes>
       
-    </Router> */}
+    </Router>
     
     </>
   );
